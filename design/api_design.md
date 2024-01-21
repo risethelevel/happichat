@@ -28,7 +28,7 @@ the a private key to encrypt all the messages.
 }
 ```
 ## Send a Message
-As user we want to send text messages, the messages
+As user we want to send text messages. Each message is encrypted with the private key.
 This section include the section
 * Send a message:
 - Method POST 
@@ -39,10 +39,23 @@ Request
         "session_id": "",
         "sender_id": "",
         "sender_ip": "",
+        "recipient_id" : "",
         "sender_user": "",
         "encrypted_body": "",
-        "attachment_id": "" 
+        "attachment_id": "",
+        "timestamp" : "",
+        "status": "",
+        "message_id":"",
     }
+```
+Response
+```
+{
+    "message_id": "",
+    "delivered_status":"",
+    "error_msg": ""
+}
+```
 ```
 - Method POST:
 - Enpoint: https://happichat.com/v1/upload-attachment
